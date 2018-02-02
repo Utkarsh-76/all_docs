@@ -1,2 +1,4 @@
 ##Syntax
-List --> [a,b,c]
+List --> l = [a,b,d,e,c]
+calling List --> l[0] gives element a, l[-1] gives element c
+slising list --> l[2:4] gives d,e
