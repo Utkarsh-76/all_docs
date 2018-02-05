@@ -1,4 +1,6 @@
 ##Syntax
 List --> l = [a,b,d,e,c]
 calling List --> l[0] gives element a, l[-1] gives element c
-slising list --> l[2:4] gives d,e
+slicing list --> l[2:4] gives d,e
+concat/adding list --> l + [f,g] = [a,b,d,e,c,f,g]
+delete element from list --> del(l[2]) = [a,b,e,c]
