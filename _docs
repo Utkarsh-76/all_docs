@@ -11,3 +11,12 @@ plt.hist(vals,bin_nos)
 plt.xlabel(x_lab)
 plt.ylabel(y_lab)
 plt.title(title)
+length of string/list --> len(str)
+
+numpy array --> np_arr = np.array(["a","b","c"])
+size of numpy array --> np_arr.shape
+calling element from numpy array --> np_arr[0,2] gives "c"
+
+plotting
+making a plot --> plt.plot(x_axis,y_axis)
+shoeing plot on screen --> plt.show()
