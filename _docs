@@ -4,3 +4,10 @@ calling List --> l[0] gives element a, l[-1] gives element c
 slicing list --> l[2:4] gives d,e
 concat/adding list --> l + [f,g] = [a,b,d,e,c,f,g]
 delete element from list --> del(l[2]) = [a,b,e,c]
+
+Plot
+plt.scatter(x_vals,y_vals)
+plt.hist(vals,bin_nos)
+plt.xlabel(x_lab)
+plt.ylabel(y_lab)
+plt.title(title)
