@@ -12,6 +12,8 @@ numpy array --> np_arr = np.array(["a","b","c"])
 size of numpy array --> np_arr.shape
 calling element from numpy array --> np_arr[0,2] gives "c"
 np.logical_and(),np.logical_or(),np.logical_not() are used as logical operators on numpy arrays
+looping over 2D np.array
+for val in np.nditer(np_2d_arr)
 
 plotting
 making a plot --> plt.plot(x_axis,y_axis)
@@ -26,6 +28,8 @@ Dictionaries
 making dictionaries --> dict = {"a":1,"b":2,"c":3}
 calling value in dict --> dict["b"] => 2
 delete a key-value pair --> del(dict["c"]) => {"a":1,"b":2}
+looping over dictionary
+for key,value in dict.items()
 
 DataFrame
 making dataframe --> df = pd.DataFrame(dict)
@@ -40,3 +44,12 @@ selecting specific rows and cols  --> brics.loc[["RU","IN"],["country"]] => coun
 use brics.loc[:,["country"]] to get full 'country column'
 use iloc if you want to access data using positions
 selecting rows using some condition --> brics[brice['area']>8]
+looping over DataFrame
+for label,row in df.iterrows()    =>  label contains label of hte row, row contains data of the row as pandas series
+brics["a"] = brics["b"].apply(len)  --> apply len function on "b" column of brics and save that to column "a"
+
+for loop
+for height in fam:
+  print(fam)          =>  this prints all height in fam list
+
+for index,height in enumerate(fam):   =>    gives index as well as height from fam list
