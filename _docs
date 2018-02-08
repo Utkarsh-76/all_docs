@@ -11,6 +11,7 @@ length of string/list --> len(str)
 numpy array --> np_arr = np.array(["a","b","c"])
 size of numpy array --> np_arr.shape
 calling element from numpy array --> np_arr[0,2] gives "c"
+np.logical_and(),np.logical_or(),np.logical_not() are used as logical operators on numpy arrays
 
 plotting
 making a plot --> plt.plot(x_axis,y_axis)
@@ -30,3 +31,12 @@ DataFrame
 making dataframe --> df = pd.DataFrame(dict)
 setting label --> df.label = label_list
 DataFrame from a csv --> pd.csv_read('names.csv' , index_col = 0{specifying index column})
+selecting a column --> brics['country']  (this returns a pandas series with labels)
+                   --> brics[['country']] (this returns a pandas DataFrame)
+selecting a rows   --> brics[1:4] outputs rows 2,3 and 4
+                   --> brics.loc['RU'] => row with 'RU' label (type is a pd series)
+                   --> brics.loc[['RU']] => row with 'RU' label (type is a pd DataFrame)
+selecting specific rows and cols  --> brics.loc[["RU","IN"],["country"]] => country col of rows 'RU' and 'IN'
+use brics.loc[:,["country"]] to get full 'country column'
+use iloc if you want to access data using positions
+selecting rows using some condition --> brics[brice['area']>8]
