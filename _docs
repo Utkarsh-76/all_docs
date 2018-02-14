@@ -5,6 +5,7 @@ slicing list --> l[2:4] gives d,e
 concat/adding list --> l + [f,g] => [a,b,d,e,c,f,g]
 delete element from list --> del(l[2]) => [a,b,e,c]
 get index of element --> l.index("c") => 4
+adding element in the end --> l.append('k')
 
 length of string/list --> len(str)
 
@@ -16,7 +17,7 @@ looping over 2D np.array
 for val in np.nditer(np_2d_arr)
 
 plotting
-making a plot --> plt.plot(x_axis,y_axis)
+making a plot --> plt.plot(x_axis,y_axis) {two dimensional}     plt.plot(y_axis) {one dimensional--set integer on x-axis}
 showing plot on screen --> plt.show()
 scatter plot --> plt.scatter(x_vals,y_vals)
 histogram --> plt.hist(vals,bin_nos)
@@ -30,6 +31,7 @@ calling value in dict --> dict["b"] => 2
 delete a key-value pair --> del(dict["c"]) => {"a":1,"b":2}
 looping over dictionary
 for key,value in dict.items()
+adding element in dictonary --> langs_count["d"]=4
 
 DataFrame
 making dataframe --> df = pd.DataFrame(dict)
@@ -53,3 +55,21 @@ for height in fam:
   print(fam)          =>  this prints all height in fam list
 
 for index,height in enumerate(fam):   =>    gives index as well as height from fam list
+
+Random number generator --> np.random.rand()
+----- "" ---- seed  --> np.random.seed(123)
+Random integer generator --> np.random.randint(0,7) => generate random integer from 0 to 6
+
+1 to 100 series --> range(100)
+
+function defination:-
+def square(orig_no):
+  """Returns squre of a value"""      --> docstrings
+  new_val = orig_val ** 2
+  return new_val
+return a tuple if you want to return more than 1 result
+  
+tuple
+t = (2,3,4)
+a,b,c = t   -> a => 2, b=>3, c=>4
+accessing an element  -->   t[1] => 3
