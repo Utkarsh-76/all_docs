@@ -1,3 +1,6 @@
+importing a function from a package
+from functools import reduce
+
 ##Syntax
 List --> l = [a,b,d,e,c]
 calling List --> l[0] gives element a, l[-1] gives element c
@@ -75,3 +78,16 @@ tuple
 t = (2,3,4)
 a,b,c = t   -> a => 2, b=>3, c=>4
 accessing an element  -->   t[1] => 3
+
+Lamda functions syntax
+rtp = lamda x, y: x**y
+function without name is anonymous function(used to pass a function into another function)
+
+map function applies a function(arg 1) to all elements of arg 2 
+filter function filters arg 2 with arg 1 condition(result = filter(lambda x:len(x)>6, fellowship))
+reduce function applies function arg 1 in a series to all elements of args 2
+
+## Exceptions
+use try, except blocks to catch exceptions
+TypeError to check for type exceptions
+Raise ValueError to specify unacceptable values
