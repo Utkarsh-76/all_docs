@@ -63,11 +63,13 @@ Random integer generator --> np.random.randint(0,7) => generate random integer f
 1 to 100 series --> range(100)
 
 function defination:-
-def square(orig_no):
+def square(orig_no,pow = 1{default argument}):
   """Returns squre of a value"""      --> docstrings
-  new_val = orig_val ** 2
+  new_val = orig_val ** pow
   return new_val
 return a tuple if you want to return more than 1 result
+pass multiple arguments --> *args
+pass multiple arguments with arguments --> **kwargs
   
 tuple
 t = (2,3,4)
