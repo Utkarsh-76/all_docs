@@ -40,6 +40,7 @@ DataFrame
 making dataframe --> df = pd.DataFrame(dict)
 setting label --> df.label = label_list
 DataFrame from a csv --> pd.csv_read('names.csv' , index_col = 0{specifying index column})
+              for chunk in pd.read_csv('data.csv', chunksize=1000{specifying the size of chunk to take at once})
 selecting a column --> brics['country']  (this returns a pandas series with labels)
                    --> brics[['country']] (this returns a pandas DataFrame)
 selecting a rows   --> brics[1:4] outputs rows 2,3 and 4
@@ -91,3 +92,9 @@ reduce function applies function arg 1 in a series to all elements of args 2
 use try, except blocks to catch exceptions
 TypeError to check for type exceptions
 Raise ValueError to specify unacceptable values
+
+##Iterators
+convert iterable into iterator --> it = iter(iterable)
+use next(it) to go to next element of iterator
+enumerate(avengers,start=10{to specify start index}) --> takes a iterable as argument and add index to it
+zip(avengers,names) --> zip more that 1 iterabels together
