@@ -11,6 +11,7 @@ get index of element --> l.index("c") => 4
 adding element in the end --> l.append('k')
 
 length of string/list --> len(str)
+calling substring --> str[2:7]
 
 numpy array --> np_arr = np.array(["a","b","c"])
 size of numpy array --> np_arr.shape
@@ -98,3 +99,15 @@ convert iterable into iterator --> it = iter(iterable)
 use next(it) to go to next element of iterator
 enumerate(avengers,start=10{to specify start index}) --> takes a iterable as argument and add index to it
 zip(avengers,names) --> zip more that 1 iterabels together
+
+##List comprehensions
+new_num = [n + 1 for n in num]
+num_pair = [(num1,num2) for num1 in range(2,4) for num2 in (4,6)]
+even_num = [num for num in range(10) if num % 2 == 0]
+even_num = [num if num % 2 == 0 else 0 for num in range(10)]
+pos_neg = {num: -num for num in range(6)}   -->   Creating a dictionary
+
+##generator
+replace [] with () in list comprehensions to make a generator.
+Generator is an iterator and behaves exactly like an iterator.
+generator funtion   -->   instead of return, use yield in the function
