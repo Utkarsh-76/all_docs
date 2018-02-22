@@ -111,3 +111,6 @@ pos_neg = {num: -num for num in range(6)}   -->   Creating a dictionary
 replace [] with () in list comprehensions to make a generator.
 Generator is an iterator and behaves exactly like an iterator.
 generator funtion   -->   instead of return, use yield in the function
+
+##file generators
+read 1 line from the file generator -->   file.readline()
