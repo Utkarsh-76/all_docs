@@ -39,6 +39,7 @@ adding element in dictonary --> langs_count["d"]=4
 
 DataFrame
 making dataframe --> df = pd.DataFrame(dict)
+empty dataframe   --> df = pd.DataFrame()
 setting label --> df.label = label_list
 DataFrame from a csv --> pd.csv_read('names.csv' , index_col = 0{specifying index column})
               for chunk in pd.read_csv('data.csv', chunksize=1000{specifying the size of chunk to take at once})
@@ -54,6 +55,7 @@ selecting rows using some condition --> brics[brice['area']>8]
 looping over DataFrame
 for label,row in df.iterrows()    =>  label contains label of hte row, row contains data of the row as pandas series
 brics["a"] = brics["b"].apply(len)  --> apply len function on "b" column of brics and save that to column "a"
+appending to a dataframe  --> df.append(df2)
 
 for loop
 for height in fam:
@@ -114,3 +116,16 @@ generator funtion   -->   instead of return, use yield in the function
 
 ##file generators
 read 1 line from the file generator -->   file.readline()
+
+##Reading data from files
+Text file --> file = open(filename,mode='r'{for read only})
+              text = file.read()  --> reading the text of the file
+              file.close()  --> closing the file
+              
+              with open(filename,mode='r') as file:
+              print(file.read())
+              
+              file.readline() --> read one line from the file
+              
+using numpy --> np.loadtxt(filename,delimiter=',',skiprows=1,usecols=[0,2])
+                data = np.genfromtxt('titanic.csv', delimiter=',', names=True, dtype=None) --> {load different type of data}
