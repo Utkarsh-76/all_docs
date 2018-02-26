@@ -41,7 +41,7 @@ DataFrame
 making dataframe --> df = pd.DataFrame(dict)
 empty dataframe   --> df = pd.DataFrame()
 setting label --> df.label = label_list
-DataFrame from a csv --> pd.csv_read('names.csv' , index_col = 0{specifying index column})
+DataFrame from a csv --> pd.csv_read('names.csv' , index_col = 0{specifying index column})[can use read_csv(file) also]
               for chunk in pd.read_csv('data.csv', chunksize=1000{specifying the size of chunk to take at once})
 selecting a column --> brics['country']  (this returns a pandas series with labels)
                    --> brics[['country']] (this returns a pandas DataFrame)
@@ -56,6 +56,14 @@ looping over DataFrame
 for label,row in df.iterrows()    =>  label contains label of hte row, row contains data of the row as pandas series
 brics["a"] = brics["b"].apply(len)  --> apply len function on "b" column of brics and save that to column "a"
 appending to a dataframe  --> df.append(df2)
+df.head() --> display first 5 values and header
+df.vaues  --> covert to numpy array
+read_csv(header = None/0/1, nrows=5{no of rows to parse}, sep= '\t'{data separator}, comment='#'{cosider line 
+          after # as comment and ignore}, na_values=['nothing']{list of strings to consider as NaN})
+read excel file --> data = pd.ExcelFile(file)
+                    data.sheet_names  --> gives name of sheets in the excel file
+                    data.parse(sheetname/sheet_index, skip_rows=[0,1], names=['Country','State'], 
+                    parse_cols=[0]) --> parse the specified sheet in dataframe
 
 for loop
 for height in fam:
@@ -129,3 +137,15 @@ Text file --> file = open(filename,mode='r'{for read only})
               
 using numpy --> np.loadtxt(filename,delimiter=',',skiprows=1,usecols=[0,2])
                 data = np.genfromtxt('titanic.csv', delimiter=',', names=True, dtype=None) --> {load different type of data}
+
+##Import SAS files
+from sastbdat import SAS7BDAT
+  with SAS7BDAT(fname) as file:
+    df_sas = file.to_data_frame()
+    
+##Import stata files
+pd.read_stata(fname)
+
+##Import HDF5 file
+import h5py
+data = h5py.file(fname,'r')
