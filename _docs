@@ -149,3 +149,21 @@ pd.read_stata(fname)
 ##Import HDF5 file
 import h5py
 data = h5py.file(fname,'r')
+
+##Import mat file
+import scipy.io
+data = scipy.io.loadmat(fname)
+
+##Import from DataBase
+  from sqlalchemy import create_engine
+  engine = create_engine('sqlite:///Northwind.sqlite')
+  con = engine.connect()
+  rs = con.execute("select * from Orders")
+  df = pd.DataFrame(rs.fetchall())
+  df.columns = rs.keys()
+  con.close()
+  /
+  with engine.connect() as con
+    rs = con.execute("select * from Orders")
+    df = pd.DataFrame(rs.fetchmany(size=5))
+    df.coumns = rs.keys()
