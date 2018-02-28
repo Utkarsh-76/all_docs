@@ -183,3 +183,13 @@ data = scipy.io.loadmat(fname)
   request=Request(url)
   response = urlopen(request)
   html = response.read()
+
+##Beautiful Soup
+from bs4 import BeautifulSoup
+soup = BeautifulSoup(html_text) // convert html text into BeautifulSoup object
+pretty_soup = soup.prettify()  //  make the BeautifulSoup look pretty(proper indentation of tags and all)
+soup.title  //  to get title of the html page
+soup.get_text() //  to get the text of html page
+a_tags = soup.find_all('a')  //  find all a tags
+for link in a_tags:
+    print(link.get('href')) //  get attribute of a tag
