@@ -167,3 +167,19 @@ data = scipy.io.loadmat(fname)
     rs = con.execute("select * from Orders")
     df = pd.DataFrame(rs.fetchmany(size=5))
     df.coumns = rs.keys()
+  df = pd.read_sql_query("select * from orders", engine)
+  
+##Import data from www
+  from urllib.request import urlretrieve
+  urlretrieve(csv_file_url,csv_file_name) // save file locally
+  df = pd.read_csv(url,sep) // read csv data directly into dataframe
+
+##Import HTML data
+  import requests
+  r = requests.get(url)
+  text = r.text // get HTML text in string
+  /
+  from urllib.request import Request,urlopen
+  request=Request(url)
+  response = urlopen(request)
+  html = response.read()
