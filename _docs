@@ -43,7 +43,7 @@ empty dataframe   --> df = pd.DataFrame()
 setting label --> df.label = label_list
 DataFrame from a csv --> pd.csv_read('names.csv' , index_col = 0{specifying index column})[can use read_csv(file) also]
               for chunk in pd.read_csv('data.csv', chunksize=1000{specifying the size of chunk to take at once})
-selecting a column --> brics['country']  (this returns a pandas series with labels)
+selecting a column --> brics['country']/brics.country  (this returns a pandas series with labels)
                    --> brics[['country']] (this returns a pandas DataFrame)
 selecting a rows   --> brics[1:4] outputs rows 2,3 and 4
                    --> brics.loc['RU'] => row with 'RU' label (type is a pd series)
@@ -68,6 +68,9 @@ read excel file --> data = pd.ExcelFile(file)
 df.columns  --> return column names
 df.shape    --> number of rows and cols of DataFrame
 df.info()   --> get info of the dataframe
+df.continent.value_counts(dropna=False) //  frequency of each data in the column=continent
+df.descride() //  descibe the numeric fields of the dataframe --> give out count,mean,median etc.
+df.boxplot(column='population',by='continent')
 
 for loop
 for height in fam:
