@@ -64,6 +64,10 @@ read excel file --> data = pd.ExcelFile(file)
                     data.sheet_names  --> gives name of sheets in the excel file
                     data.parse(sheetname/sheet_index, skip_rows=[0,1], names=['Country','State'], 
                     parse_cols=[0]) --> parse the specified sheet in dataframe
+                    
+df.columns  --> return column names
+df.shape    --> number of rows and cols of DataFrame
+df.info()   --> get info of the dataframe
 
 for loop
 for height in fam:
@@ -178,6 +182,7 @@ data = scipy.io.loadmat(fname)
   import requests
   r = requests.get(url)
   text = r.text // get HTML text in string
+  json = r.json() //  if the incoming data is in json format
   /
   from urllib.request import Request,urlopen
   request=Request(url)
@@ -193,3 +198,8 @@ soup.get_text() //  to get the text of html page
 a_tags = soup.find_all('a')  //  find all a tags
 for link in a_tags:
     print(link.get('href')) //  get attribute of a tag
+
+##Reading json
+import json
+with open(json_fname,'r') as json_file
+  json_data = json.load(json_file)  //  json_data is a dictionary
