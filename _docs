@@ -210,3 +210,6 @@ with open(json_fname,'r') as json_file
 
 pd.melt(frame = df, id_vars = 'name'{columns to keep constant}, value_vars=['trea a','trea b']{comlumn names to melt},
 var_name='treatment'{variable col name}, value_name = 'result'{name of the value column})
+
+df.pivot(index='date'{column to be fixed}, columns='element'{column to pivot}, values='values'{values to fill in the df})
+df.pivot_table(index='date', columns='element', values='values', aggfunc=np.mean) // to take care of duplicate values
