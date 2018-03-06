@@ -23,8 +23,9 @@ for val in np.nditer(np_2d_arr)
 plotting
 making a plot --> plt.plot(x_axis,y_axis) {two dimensional}     plt.plot(y_axis) {one dimensional--set integer on x-axis}
 showing plot on screen --> plt.show()
-scatter plot --> plt.scatter(x_vals,y_vals)
-histogram --> plt.hist(vals,bin_nos)
+scatter plot --> plt.scatter(x_vals,y_vals) / df.plot(kind='scatter')
+histogram --> plt.hist(vals,bin_nos) / df.plot(kind='hist')
+boxplot --> plt.boxplot(columns='data_column',by='group_by_column_name')
 plt.xlabel(x_lab)
 plt.ylabel(y_lab)
 plt.title(title)
@@ -41,7 +42,7 @@ DataFrame
 making dataframe --> df = pd.DataFrame(dict)
 empty dataframe   --> df = pd.DataFrame()
 setting label --> df.label = label_list
-DataFrame from a csv --> pd.csv_read('names.csv' , index_col = 0{specifying index column})[can use read_csv(file) also]
+DataFrame from a csv --> pd.csv_read('names.csv' , index_col = 0{specifyingby index column})[can use read_csv(file) also]
               for chunk in pd.read_csv('data.csv', chunksize=1000{specifying the size of chunk to take at once})
 selecting a column --> brics['country']/brics.country  (this returns a pandas series with labels)
                    --> brics[['country']] (this returns a pandas DataFrame)
@@ -206,3 +207,6 @@ for link in a_tags:
 import json
 with open(json_fname,'r') as json_file
   json_data = json.load(json_file)  //  json_data is a dictionary
+
+pd.melt(frame = df, id_vars = 'name'{columns to keep constant}, value_vars=['trea a','trea b']{comlumn names to melt},
+var_name='treatment'{variable col name}, value_name = 'result'{name of the value column})
