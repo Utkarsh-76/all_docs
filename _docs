@@ -12,6 +12,8 @@ adding element in the end --> l.append('k')
 
 length of string/list --> len(str)
 calling substring --> str[2:7]
+splitting string into list--> str_split = str.split('_'){default splits with ' '}
+get 1st splitted string --> str_split.str.get(0)
 
 numpy array --> np_arr = np.array(["a","b","c"])
 size of numpy array --> np_arr.shape
@@ -72,6 +74,7 @@ df.info()   --> get info of the dataframe
 df.continent.value_counts(dropna=False) //  frequency of each data in the column=continent
 df.descride() //  descibe the numeric fields of the dataframe --> give out count,mean,median etc.
 df.boxplot(column='population',by='continent')
+pd.concat([df1,df2], ignore_index=True{ignore original index}, axis=1{1 for horizontal concat})
 
 for loop
 for height in fam:
@@ -213,3 +216,7 @@ var_name='treatment'{variable col name}, value_name = 'result'{name of the value
 
 df.pivot(index='date'{column to be fixed}, columns='element'{column to pivot}, values='values'{values to fill in the df})
 df.pivot_table(index='date', columns='element', values='values', aggfunc=np.mean) // to take care of duplicate values
+
+##Globbing
+import glob
+csv_files = glob.glob(*.csv){get all the csv files}
