@@ -75,6 +75,10 @@ df.continent.value_counts(dropna=False) //  frequency of each data in the column
 df.descride() //  descibe the numeric fields of the dataframe --> give out count,mean,median etc.
 df.boxplot(column='population',by='continent')
 df.type() --> get details about the dataframe
+df.apply(funtion_to_apply_to_df, axis = 0/1{for each column/row}, pattern=pat{pass additional parameter to the function})
+df.init_cost.replace("$"," ") {replace $ with ' ' in whole column}
+df.drop_duplicates --> drop duplicate rows from df
+df.drop_na --> drop rowa with NaN values in them
 pd.concat([df1,df2], ignore_index=True{ignore original index}, axis=1{1 for horizontal concat})
 pd.merge(left = df_l, right = df_r, on={name of to join with}, left_on={name of col in df_l}, right_on={name of col in df_r})
 
@@ -228,16 +232,26 @@ df['a']=df['a'].astype(str/'category'){convert numeric col to string/categorical
 df['a']=pd.to_numeric(df['a'],errors='coerce'){convert to numeric column with non-numeric data coverted to NaN}
 
 ##Regular Expressions
-\d -- match a single digit
-\d{n} -- match exactly n digits
-\d* -- match digits 0 or more times
-\$,\# etc. -- escape character, use $,# etc. as it is
-. -- match any one character
-^ -- match the pattern at the beginning
-$ -- match the pattern at the end 
-^\d*$ -- this will match strings that have only digits{'1'} and not str --> 'I have 10 rupee'
+https://docs.python.org/3/library/re.html
+\d          -- match a single digit
+\d{n}       -- match exactly n digits
+\d*         -- match digits 0 or more times
+\$,\# etc.  -- escape character, use $,# etc. as it is
+.           -- match any one character
+^           -- match the pattern at the beginning
+$           -- match the pattern at the end 
+^\d*$       -- this will match strings that have only digits{'1'} and not str --> 'I have 10 rupee'
++           -- match the previous one with 1 or more matches
+[A-Z]       -- match a capital letter
+\w          -- match an alpha-numeric character
 
 import re
   pattern = re.compile('^\d*$')
   result = pattern.match('10')
   bool(result) --> gives True
+  re.findall(pattern,str) --> find everything in str that matches the pattern {no compilation needed}
+
+##Missing Values
+df[['a','b']] = df[['a','b']].fillna(0) --> fill missing values in a nad b column with 0
+df['a'] = df['a'].fillna('missing') --> fill missing vlaues with 'missing' string
+df['a'] = df['a'].fillna(df['a'].mean()) --> fill missing values with mean of the column
