@@ -62,6 +62,7 @@ for label,row in df.iterrows()    =>  label contains label of hte row, row conta
 brics["a"] = brics["b"].apply(len)  --> apply len function on "b" column of brics and save that to column "a"
 appending to a dataframe  --> df.append(df2)
 df.head() --> display first 5 values and header
+df.tail() --> display last 5 values and header
 df.vaues  --> covert to numpy array
 read_csv(header = None/0/1, nrows=5{no of rows to parse}, sep= '\t'{data separator}, comment='#'{cosider line 
           after # as comment and ignore}, na_values=['nothing']{list of strings to consider as NaN})
