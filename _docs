@@ -14,6 +14,7 @@ length of string/list --> len(str)
 calling substring --> str[2:7]
 splitting string into list--> str_split = str.split('_'){default splits with ' '}
 get 1st splitted string --> str_split.str.get(0)
+string contains a regex --> str.contains()
 
 numpy array --> np_arr = np.array(["a","b","c"])
 size of numpy array --> np_arr.shape
@@ -25,7 +26,7 @@ for val in np.nditer(np_2d_arr)
 plotting
 making a plot --> plt.plot(x_axis,y_axis) {two dimensional}     plt.plot(y_axis) {one dimensional--set integer on x-axis}
 showing plot on screen --> plt.show()
-scatter plot --> plt.scatter(x_vals,y_vals) / df.plot(kind='scatter')
+scatter plot --> plt.scatter(x_vals,y_vals) / df.plot(kind='scatter', x='1800',y='1900')
 histogram --> plt.hist(vals,bin_nos) / df.plot(kind='hist')
 boxplot --> plt.boxplot(columns='data_column',by='group_by_column_name')
 plt.xlabel(x_lab)
@@ -46,6 +47,7 @@ empty dataframe   --> df = pd.DataFrame()
 setting label --> df.label = label_list
 DataFrame from a csv --> pd.csv_read('names.csv' , index_col = 0{specifyingby index column})[can use read_csv(file) also]
               for chunk in pd.read_csv('data.csv', chunksize=1000{specifying the size of chunk to take at once})
+DfataFrame to csv --> df.to_csv['my_data.csv']
 selecting a column --> brics['country']/brics.country  (this returns a pandas series with labels)
                    --> brics[['country']] (this returns a pandas DataFrame)
 selecting a rows   --> brics[1:4] outputs rows 2,3 and 4
@@ -72,15 +74,15 @@ df.columns  --> return column names
 df.shape    --> number of rows and cols of DataFrame
 df.info()   --> get info of the dataframe
 df.continent.value_counts(dropna=False) //  frequency of each data in the column=continent
-df.descride() //  descibe the numeric fields of the dataframe --> give out count,mean,median etc.
+df.describe() //  describe the numeric fields of the dataframe --> give out count,mean,median etc.
 df.boxplot(column='population',by='continent')
 df.type() --> get details about the dataframe
 df.apply(funtion_to_apply_to_df, axis = 0/1{for each column/row}, pattern=pat{pass additional parameter to the function})
 df.init_cost.replace("$"," ") {replace $ with ' ' in whole column}
 df.drop_duplicates --> drop duplicate rows from df
-df.drop_na --> drop rowa with NaN values in them
+df.dropna() --> drop rows with NaN values in them
 pd.concat([df1,df2], ignore_index=True{ignore original index}, axis=1{1 for horizontal concat})
-pd.merge(left = df_l, right = df_r, on={name of to join with}, left_on={name of col in df_l}, right_on={name of col in df_r})
+pd.merge(left = df_l, right = df_r, on={name of col to join with}, left_on={name of col in df_l}, right_on={name of col in df_r})
 
 for loop
 for height in fam:
@@ -244,6 +246,8 @@ $           -- match the pattern at the end
 +           -- match the previous one with 1 or more matches
 [A-Z]       -- match a capital letter
 \w          -- match an alpha-numeric character
+A-Za-z      -- match capital/small letter
+[A-Za-z\.\s]* -- any capital letter, any . and any ' ' is acceptable
 
 import re
   pattern = re.compile('^\d*$')
@@ -252,6 +256,8 @@ import re
   re.findall(pattern,str) --> find everything in str that matches the pattern {no compilation needed}
 
 ##Missing Values
-df[['a','b']] = df[['a','b']].fillna(0) --> fill missing values in a nad b column with 0
+df[['a','b']] = df[['a','b']].fillna(0) --> fill missing values in a and b column with 0
 df['a'] = df['a'].fillna('missing') --> fill missing vlaues with 'missing' string
 df['a'] = df['a'].fillna(df['a'].mean()) --> fill missing values with mean of the column
+
+.all() --> return single T/F for all T/F result of a column
