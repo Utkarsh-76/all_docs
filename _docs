@@ -27,7 +27,7 @@ plotting
 making a plot --> plt.plot(x_axis,y_axis) {two dimensional}     plt.plot(y_axis) {one dimensional--set integer on x-axis}
 showing plot on screen --> plt.show()
 line graph --> df.plot(subplots=True{plot all columns of df seperately})
-scatter plot --> plt.scatter(x_vals,y_vals) / df.plot(kind='scatter', x='1800',y='1900')
+scatter plot --> plt.scatter(x_vals,y_vals) / df.plot(kind='scatter', x='1800',y='1900',s=radius_in_pixels_for_each_point)
 histogram --> plt.hist(vals,bin_nos) / df.plot(kind='hist')
 boxplot --> plt.boxplot(columns='data_column',by='group_by_column_name')
 plt.xlabel(x_lab)
