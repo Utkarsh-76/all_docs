@@ -24,7 +24,7 @@ looping over 2D np.array
 for val in np.nditer(np_2d_arr)
 
 plotting
-making a plot --> plt.plot(x_axis,y_axis) {two dimensional}     plt.plot(y_axis) {one dimensional--set integer on x-axis}
+making a plot --> plt.plot(x = x_axis,y = y_axis) {two dimensional}     plt.plot(y_axis) {one dimensional--set integer on x-axis}
 showing plot on screen --> plt.show()
 line graph --> df.plot(subplots=True{plot all columns of df seperately})
 scatter plot --> plt.scatter(x_vals,y_vals) / df.plot(kind='scatter', x='1800',y='1900',s=radius_in_pixels_for_each_point)
@@ -34,6 +34,7 @@ plt.xlabel(x_lab)
 plt.ylabel(y_lab)
 plt.title(title)
 plt.savefig('fig.png/fig.jpg/fig.pdf')
+plt.subplot(nrows=3,ncols=1) --> create 3 subplots as 3*1 matrix
 
 Dictionaries
 making dictionaries --> dict = {"a":1,"b":2,"c":3}
@@ -80,6 +81,13 @@ df.shape    --> number of rows and cols of DataFrame
 df.info()   --> get info of the dataframe
 df.continent.value_counts(dropna=False) //  frequency of each data in the column=continent
 df.describe() //  describe the numeric fields of the dataframe --> give out count,mean,median etc.
+df.count() --> count of non-null values of each col in dataframe
+df.mean() --> mean of each col in dataframe ignoring null entries
+df.std() --> standard deviation of each col in dataframe ignoring null entries
+df.median()
+df.min()
+df.max()
+df.quantile(0.5/0.6) --> observation having 50/60 percent data smaller than itself
 df.boxplot(column='population',by='continent')
 df.type() --> get details about the dataframe
 df.apply(funtion_to_apply_to_df, axis = 0/1{for each column/row}, pattern=pat{pass additional parameter to the function})
@@ -88,6 +96,7 @@ df.drop_duplicates --> drop duplicate rows from df
 df.dropna() --> drop rows with NaN values in them
 pd.concat([df1,df2], ignore_index=True{ignore original index}, axis=1{1 for horizontal concat})
 pd.merge(left = df_l, right = df_r, on={name of col to join with}, left_on={name of col in df_l}, right_on={name of col in df_r})
+df.reindex(list_of_new_df_index, method = 'ffill/bfill'{fill non-matching entries with preceding/succeding non-null entry})
 
 for loop
 for height in fam:
