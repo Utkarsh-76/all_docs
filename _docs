@@ -35,6 +35,7 @@ plt.ylabel(y_lab)
 plt.title(title)
 plt.savefig('fig.png/fig.jpg/fig.pdf')
 plt.subplot(nrows=3,ncols=1) --> create 3 subplots as 3*1 matrix
+df.plot(style='color_marker_lineType')
 
 Dictionaries
 making dictionaries --> dict = {"a":1,"b":2,"c":3}
@@ -97,6 +98,9 @@ df.dropna() --> drop rows with NaN values in them
 pd.concat([df1,df2], ignore_index=True{ignore original index}, axis=1{1 for horizontal concat})
 pd.merge(left = df_l, right = df_r, on={name of col to join with}, left_on={name of col in df_l}, right_on={name of col in df_r})
 df.reindex(list_of_new_df_index, method = 'ffill/bfill'{fill non-matching entries with preceding/succeding non-null entry})
+df.resample('D').mean() --> resample data to daily samples and display mean of each sample{must have datetime as the index}
+df.resample('D').mean().interpolate('linear') --> linear interpolation for missing data
+df.rolling(window=24).mean --> display mean of each point with 24hrs window stretching out from that point
 
 for loop
 for height in fam:
@@ -275,3 +279,7 @@ df['a'] = df['a'].fillna('missing') --> fill missing vlaues with 'missing' strin
 df['a'] = df['a'].fillna(df['a'].mean()) --> fill missing values with mean of the column
 
 .all() --> return single T/F for all T/F result of a column
+
+##Series
+Ser.str.upper() --> covert the series to upper case characters
+Ser.str.contains('sub_str') --> return T/F series 
