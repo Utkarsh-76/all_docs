@@ -101,6 +101,7 @@ df.reindex(list_of_new_df_index, method = 'ffill/bfill'{fill non-matching entrie
 df.resample('D').mean() --> resample data to daily samples and display mean of each sample{must have datetime as the index}
 df.resample('D').mean().interpolate('linear') --> linear interpolation for missing data
 df.rolling(window=24).mean --> display mean of each point with 24hrs window stretching out from that point
+df.drop(col_list_to_drop)
 
 for loop
 for height in fam:
