@@ -92,6 +92,7 @@ df.quantile(0.5/0.6) --> observation having 50/60 percent data smaller than itse
 df.boxplot(column='population',by='continent')
 df.type() --> get details about the dataframe
 df.apply(funtion_to_apply_to_df, axis = 0/1{for each column/row}, pattern=pat{pass additional parameter to the function})
+df.map(funtion to apply to index)-->map function to index of df
 df.init_cost.replace("$"," ") {replace $ with ' ' in whole column}
 df.drop_duplicates --> drop duplicate rows from df
 df.dropna() --> drop rows with NaN values in them
@@ -102,6 +103,9 @@ df.resample('D').mean() --> resample data to daily samples and display mean of e
 df.resample('D').mean().interpolate('linear') --> linear interpolation for missing data
 df.rolling(window=24).mean --> display mean of each point with 24hrs window stretching out from that point
 df.drop(col_list_to_drop)
+df.all() --> Whick cols have all non-zero values
+df.any() --> Which cols have any non-zero values
+df.floordiv(n) --> diide all element in df by 'n' and take floor
 
 for loop
 for height in fam:
@@ -284,3 +288,4 @@ df['a'] = df['a'].fillna(df['a'].mean()) --> fill missing values with mean of th
 ##Series
 Ser.str.upper() --> covert the series to upper case characters
 Ser.str.contains('sub_str') --> return T/F series 
+pd.series(value_list, index = index_list)
