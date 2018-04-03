@@ -289,3 +289,9 @@ df['a'] = df['a'].fillna(df['a'].mean()) --> fill missing values with mean of th
 Ser.str.upper() --> covert the series to upper case characters
 Ser.str.contains('sub_str') --> return T/F series 
 pd.series(value_list, index = index_list)
+
+##Multi-indexing
+df.set_index(['a','b']) --> set a,b as mulit-index
+df.sort_index --> sort the index with 1st index not repeating
+df.loc[('index1_identifier', 'index2_identifier'),'column'] 
+df.loc[(slice(None){used in tuple index instead of :}, slice('index2_indentifier1', 'index2_indentifier2')),:] 
