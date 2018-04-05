@@ -295,3 +295,12 @@ df.set_index(['a','b']) --> set a,b as mulit-index
 df.sort_index --> sort the index with 1st index not repeating
 df.loc[('index1_identifier', 'index2_identifier'),'column'] 
 df.loc[(slice(None){used in tuple index instead of :}, slice('index2_indentifier1', 'index2_indentifier2')),:] 
+
+##groupby
+df.groupby(col_to_groupby).count() {give count for distinct values of col which we grouped by}
+df.groupby(col_to_groupby)[col_to_operate_on].aggfunc()
+df.groupby(col_to_groupby).agg(aggfunc/user defined aggregation func/dictionary)
+
+df.col.idxmax(){row-wise}/df.col.idxmax(axis='columns'){col-wise} --> give lable with max value
+df.col.idxmin()
+.nunique() --> gives number of unique values in a col
