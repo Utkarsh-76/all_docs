@@ -268,6 +268,8 @@ $           -- match the pattern at the end
 ^\d*$       -- this will match strings that have only digits{'1'} and not str --> 'I have 10 rupee'
 +           -- match the previous one with 1 or more matches
 [A-Z]       -- match a capital letter
+[\w.-]+     -- match a word/./- any number of times(+)
+[^ac]       -- match any character except a/c
 \w          -- match an alpha-numeric character
 A-Za-z      -- match capital/small letter
 [A-Za-z\.\s]* -- any capital letter, any . and any ' ' is acceptable
