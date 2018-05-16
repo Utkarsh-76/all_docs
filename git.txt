@@ -1,0 +1,1 @@
+git config --global http.proxy http://username:pw@geoproxy.geo.msci.org:8080
