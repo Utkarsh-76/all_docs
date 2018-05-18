@@ -176,6 +176,7 @@ Text file --> file = open(filename,mode='r'{for read only})
               print(file.read())
               
               file.readline() --> read one line from the file
+              file.readlines() --> read multiple lines
               
 using numpy --> np.loadtxt(filename,delimiter=',',skiprows=1,usecols=[0,2])
                 data = np.genfromtxt('titanic.csv', delimiter=',', names=True, dtype=None) --> {load different type of data}
