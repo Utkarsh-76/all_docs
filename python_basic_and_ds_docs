@@ -2,7 +2,7 @@ importing a function from a package
 from functools import reduce
 
 ##Syntax
-List --> l = [a,b,d,e,c]
+List --> l = [a,b,d,e,c] (list can contain different datatype)
 calling List --> l[0] gives element a, l[-1] gives element c
 slicing list --> l[2:4] gives d,e
 concat/adding list --> l + [f,g] => [a,b,d,e,c,f,g]
