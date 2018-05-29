@@ -259,27 +259,45 @@ df['a']=pd.to_numeric(df['a'],errors='coerce'){convert to numeric column with no
 
 ##Regular Expressions
 https://docs.python.org/3/library/re.html
+[abc$]      -- match a,b,c,$
+[^ac]       -- match any character except a/c
+\w          -- match an alpha-numeric character ~~ [a-zA-Z0-9_]
+\w          -- match an non alpha-numeric character ~~ [^a-zA-Z0-9_]
 \d          -- match a single digit
-\d{n}       -- match exactly n digits
+\D          ~~ [^0-9]
+\s          -- match any whitespace character ~~ [ \t\n\r\f\v]
+\S          -- match any non whitespace character ~~ [^ \t\n\r\f\v]
+.           -- match any one character except a new line
 \d*         -- match digits 0 or more times
+\d+         -- match digits 1 or more times
+\d?         -- match digits 0 or 1 time
+\d{n}       -- match exactly n digits
+\d{m,n}     -- match min m and max n digits
+r"\n"       -- match \n exactly(r for raw string)
 \$,\# etc.  -- escape character, use $,# etc. as it is
-.           -- match any one character
 ^           -- match the pattern at the beginning
 $           -- match the pattern at the end 
 ^\d*$       -- this will match strings that have only digits{'1'} and not str --> 'I have 10 rupee'
 +           -- match the previous one with 1 or more matches
 [A-Z]       -- match a capital letter
 [\w.-]+     -- match a word/./- any number of times(+)
-[^ac]       -- match any character except a/c
-\w          -- match an alpha-numeric character
 A-Za-z      -- match capital/small letter
 [A-Za-z\.\s]* -- any capital letter, any . and any ' ' is acceptable
+
+p = re.compile('RE pattern')  --> compile the RegEx
+m = p.match --> match 'REp' default starting at index 0
+m = p.search --> match 'REp' default starting at any index
+m.group() --> return the matching string
+m.start() --> index of start of matching string
+m.end() --> index of end of matching string
+m.span() --> return (m.start(),m.end())
+p.findall --> match all instace of 'REp' and return matching strings
+all above functions can be used as re.findall/match/search/sub(pattern,str){skipping compile step}
 
 import re
   pattern = re.compile('^\d*$')
   result = pattern.match('10')
   bool(result) --> gives True
-  re.findall(pattern,str) --> find everything in str that matches the pattern {no compilation needed}
 
 ##Missing Values
 df[['a','b']] = df[['a','b']].fillna(0) --> fill missing values in a and b column with 0
