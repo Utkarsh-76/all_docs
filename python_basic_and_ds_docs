@@ -17,6 +17,7 @@ get 1st splitted string --> str_split.str.get(0)
 string contains a regex --> str.contains()
 string replace --> str.replace(old, new[, max number of replacements])
 count repetition of substr --> str.count(substr)
+any(list) --> true if any lement in the list is true
 
 numpy array --> np_arr = np.array(["a","b","c"])
 size of numpy array --> np_arr.shape
