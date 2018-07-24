@@ -8,6 +8,10 @@ sklearn.cross_validation - train_test_split  --> validate using tarining and tes
 sklearn.neighbours --> neighbours algorithms
                     -  KNeighboursClassifiers
                     
+sklearn.grid_searvh --> 
+                      - GridSearchCV
+                      - RandomizedSearchCV
+                    
 sklearn --> scikit learn
           - metrics       --> model evaluation
           
@@ -24,3 +28,14 @@ scores = cross_val_score(knn{model instance}, X, y, cv=10{cross validation folds
 scores.mean()
 
 metrics.accuracy_score(y_test,y_pred) (test accuracy of classification model)
+
+grid = GridSearchCV(knn{model instance}, param_grid{dict of param to change in model and values}, cv=10, scoring='accuracy')
+grid.grid_scores_[0].parameters             ->  param of this instance
+grid.grid_scores_[0].cv_validation_scores   ->  scores of this instance
+grid.grid_scores_[0].mean_validation_score  ->  mean score of this instance
+grid.best_score_      ->  best accuracy score
+grid.best_params_     ->  param with best score
+grid.best_estimator_  ->  model object fit with best params
+grid.predict          ->  predict values with best model params
+
+rand = RandomizedSearchCV(knn, param_dist, cv=10, scoring='accuracy', n_iter=10{number of random combinations to try}, random_state=5)
