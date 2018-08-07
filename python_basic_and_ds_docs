@@ -1,3 +1,9 @@
+--Intalling a package
+1. Download the package
+2. Open terminal
+3. Go to the directory where the file is placed and unzip it
+4. Run "python setup.py install"
+
 importing a function from a package
 from functools import reduce
 
