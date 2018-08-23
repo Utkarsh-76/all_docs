@@ -190,6 +190,8 @@ Text file --> file = open(filename,mode='r'{for read only})
               file.readline() --> read one line from the file
               file.readlines() --> read multiple lines
               
+              for line in file/open(filename)
+              
 using numpy --> np.loadtxt(filename,delimiter=',',skiprows=1,usecols=[0,2])
                 data = np.genfromtxt('titanic.csv', delimiter=',', names=True, dtype=None) --> {load different type of data}
 
