@@ -45,3 +45,4 @@ from sklearn import tree
 dec_tree = tree.DecisionTreeClassifier()
 clf.fit(X,y)
 y_pred = (X_test)
+decison tree --> http://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html
