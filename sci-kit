@@ -8,6 +8,8 @@ sklearn.cross_validation - train_test_split  --> validate using tarining and tes
 sklearn.neighbours --> neighbours algorithms
                     -  KNeighboursClassifiers
                     
+sklearn.linear_model --> LinearRegression
+                    
 sklearn.grid_searvh --> 
                       - GridSearchCV
                       - RandomizedSearchCV
