@@ -48,6 +48,7 @@ plt.title(title)
 plt.savefig('fig.png/fig.jpg/fig.pdf')
 plt.subplot(nrows=3,ncols=1) --> create 3 subplots as 3*1 matrix
 df.plot(style='color_marker_lineType')
+bar plots --> https://plot.ly/matplotlib/bar-charts/
 
 Dictionaries
 making dictionaries --> dict = {"a":1,"b":2,"c":3}
