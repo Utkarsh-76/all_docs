@@ -39,3 +39,9 @@ grid.best_estimator_  ->  model object fit with best params
 grid.predict          ->  predict values with best model params
 
 rand = RandomizedSearchCV(knn, param_dist, cv=10, scoring='accuracy', n_iter=10{number of random combinations to try}, random_state=5)
+
+
+from sklearn import tree
+dec_tree = tree.DecisionTreeClassifier()
+clf.fit(X,y)
+y_pred = (X_test)
