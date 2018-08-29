@@ -95,6 +95,7 @@ df.shape    --> number of rows and cols of DataFrame
 df.info()   --> get info of the dataframe
 df.continent.value_counts(dropna=False) //  frequency of each data in the column=continent
 df.describe() //  describe the numeric fields of the dataframe --> give out count,mean,median etc.
+df.isnull().sum() // get number of nan values in each column
 df.count() --> count of non-null values of each col in dataframe
 df.mean() --> mean of each col in dataframe ignoring null entries
 df.std() --> standard deviation of each col in dataframe ignoring null entries
@@ -318,6 +319,7 @@ import re
 df[['a','b']] = df[['a','b']].fillna(0) --> fill missing values in a and b column with 0
 df['a'] = df['a'].fillna('missing') --> fill missing vlaues with 'missing' string
 df['a'] = df['a'].fillna(df['a'].mean()) --> fill missing values with mean of the column
+https://www.analyticsindiamag.com/5-ways-handle-missing-values-machine-learning-datasets/
 
 .all() --> return single T/F for all T/F result of a column
 
