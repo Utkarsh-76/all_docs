@@ -1,5 +1,8 @@
 ### Where to find what and explanations
 
+basic scikit-learn tutorial
+http://blog.kaggle.com/author/kevin-markham/
+
 sklearn.datasets --> example datasets
 
 sklearn.cross_validation - train_test_split  --> validate using tarining and testing split
@@ -32,6 +35,7 @@ scores.mean()
 metrics.accuracy_score(y_test,y_pred) (test accuracy of classification model)
 
 grid = GridSearchCV(knn{model instance}, param_grid{dict of param to change in model and values}, cv=10, scoring='accuracy')
+grid.fit(X,y)
 grid.grid_scores_[0].parameters             ->  param of this instance
 grid.grid_scores_[0].cv_validation_scores   ->  scores of this instance
 grid.grid_scores_[0].mean_validation_score  ->  mean score of this instance
@@ -48,3 +52,8 @@ dec_tree = tree.DecisionTreeClassifier()
 clf.fit(X,y)
 y_pred = (X_test)
 decison tree --> http://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html
+
+from sklearn.ensemble import GradientBoostingClassifier
+clf = GradientBoostingClassifier()
+
+GBM parameter tuning--> https://www.analyticsvidhya.com/blog/2016/02/complete-guide-parameter-tuning-gradient-boosting-gbm-python/
