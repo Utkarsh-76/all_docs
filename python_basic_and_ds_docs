@@ -71,6 +71,7 @@ DfataFrame to csv --> df.to_csv('my_data.csv', index = False{do not save index i
 DfataFrame to excel --> df.to_excel('my_data.xlsx')
 selecting a column --> brics['country']/brics.country  (this returns a pandas series with labels)
                    --> brics[['country']] (this returns a pandas DataFrame)
+                   --> brics[:,0:3](return 1st to 3rd column)
 selecting a rows   --> brics[1:4] outputs rows 2,3 and 4
                    --> brics.loc['RU'] => row with 'RU' label (type is a pd series)
                    --> brics.loc[['RU']] => row with 'RU' label (type is a pd DataFrame)
