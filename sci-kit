@@ -31,6 +31,8 @@ y_pred = knn.predict(X_test)
 
 scores = cross_val_score(knn{model instance}, X, y, cv=10{cross validation folds}, scoring = 'accuracy') --> gives array with 10 results
 scores.mean()
+train_scores, test_scores = validation_curve(estimator, X, y, param_name, param_range, cv){cross_validation_plot}
+train_sizes, train_scores, test_scores = learning_curve(estimator, X, y, cv=cv){learning curve to identify under/overfitting}
 
 metrics.accuracy_score(y_test,y_pred) (test accuracy of classification model)
 
