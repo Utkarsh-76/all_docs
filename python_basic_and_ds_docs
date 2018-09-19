@@ -51,7 +51,7 @@ df.plot(style='color_marker_lineType')
 bar plots --> https://plot.ly/matplotlib/bar-charts/
 
 Dictionaries
-making dictionaries --> dict = {"a":1,"b":2,"c":3}
+making dictionaries --> dict = {"a":1,"b":2,"c":3} , dict(list_of_tuple)
 calling value in dict --> dict["b"] => 2
 delete a key-value pair --> del(dict["c"]) => {"a":1,"b":2}
 looping over dictionary
