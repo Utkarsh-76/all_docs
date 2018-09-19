@@ -108,6 +108,7 @@ df.boxplot(column='population',by='continent')
 df.type() --> get details about the dataframe
 df.apply(funtion_to_apply_to_df, axis = 0/1{for each column/row}, pattern=pat{pass additional parameter to the function})
 df.map(funtion to apply to index)-->map function to index of df
+df[col_name].map(dictionary to apply to col)
 df.init_cost.replace("$"," ") {replace $ with ' ' in whole column}
 df.drop_duplicates --> drop duplicate rows from df
 df.dropna() --> drop rows with NaN values in them
