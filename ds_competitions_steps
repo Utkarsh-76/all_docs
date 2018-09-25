@@ -18,6 +18,14 @@ Step-1
                           frequency encoding)
       2> One-Hot Encoding - Convert 1 categorical feature to multiple columns with 0 and 1 at appropriate places
                             (pandas.get_dummies/sklearn.preprocessing.OneHotEncoder)
+                            
+    Text
+      1> Lowercase      - Convert everything to lowercase
+      2> Lemmatization  - carefully converting words which are basically the same(e.g. democratic, democratization, 
+                          democracy to democracy)
+      3> Stemming       - Converting words which are basically the same(e.g. democratic, democratization, democracy to democr)
+      4> Stopwords      - remove common occuring words/Articles/prepositions(eg. of,is,are etc.)
+                        - max_df feature of CountVectorizer
       
       
     
@@ -48,3 +56,24 @@ Step-3
     3> Reconstruct values
     4> Generate new feature isnull
     5> Xgboost can handle NaNs by itself
+    
+    
+    
+Step-4
+  Feature extraction
+    From Text
+      1> Bag of Words - count frequency of each word and build a table(sklearn.feature_extraction.text.CountVectorizer)
+                      - need to preprocess this to scale features(term frequency tranformation) and boost imp. 
+                        ones(inverse documentFrequency)
+                      - sklearn.feature_extraction.text.TfidfVectorizer(TFiDf transformation)
+                      - N-grams -> use n consecutive n words instead of single word(use Ngram_range, 
+                        analyzer(char) in CountVectorizer)
+                        
+      2> Word2vec     - Convert word to vector(similarly used words are close in this multi-dimensionl space)
+                      - Can do sum/difference on these vectors
+
+    From Images
+      vector from Images
+      1> Descriptors
+      2> Train Network from scratch
+      3> Finetuning
