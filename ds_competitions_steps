@@ -33,9 +33,25 @@ Step-2
   Feature Generation
     Numeric Features
       1> Prior Knowledge
-      2> EDA
-    
-    Categorical and Ordinal Features
+      2> EDA   --  https://seaborn.pydata.org/
+        - Building domain knowledge
+        - Checking errors(Errors can be used to generate feature)
+        - Understanding how the data was generated
+        - Data Visualization
+           >> Explore individual features
+              # Histograms : number of value in each bin(plt.hist)
+                             Cannot tell if a value is repeated several time or are values different in 1 bin
+              # Plot index v/s values : plt.plot(x,'.')
+              
+           >> Explore feature relation
+              # Relation b/w 2 values : plt.scatter(x1, x2)
+                                        Find distinct combination of data
+
+              # Relattion each pair of data : plt.scatter_matrix(df)(to plot all sctter plots)
+                                              df.corr(), plt.matshow
+                                              
+              # Generate new featur using groups : e.g. df.mean().sort_values().plot(style='.')
+                                              
       1> Feature interaction b/w categorical variables - Combining 2 or more categorical features to generate new features
                                                          (LM, KNN, NN)
     
@@ -77,3 +93,12 @@ Step-4
       1> Descriptors
       2> Train Network from scratch
       3> Finetuning
+
+
+
+Step-5
+  Data Cleaning
+    1> Remove constant data
+    2> Drop duplicate columns(same levels can have different tags)
+    3> Remove duplicate row from train and test
+    4> Check that the data is shuffled
