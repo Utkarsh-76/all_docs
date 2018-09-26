@@ -98,6 +98,7 @@ df.continent.value_counts(dropna=False) //  frequency of each data in the column
 df.describe() //  describe the numeric fields of the dataframe --> give out count,mean,median etc.
 df.isnull().sum() // get number of nan values in each column
 df.count() --> count of non-null values of each col in dataframe
+df.value_count() --> count frequency of each value
 df.mean() --> mean of each col in dataframe ignoring null entries
 df.std() --> standard deviation of each col in dataframe ignoring null entries
 df.median()
