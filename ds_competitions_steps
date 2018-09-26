@@ -102,3 +102,7 @@ Step-5
     2> Drop duplicate columns(same levels can have different tags)
     3> Remove duplicate row from train and test
     4> Check that the data is shuffled
+    
+    
+Step-6
+  Validation
