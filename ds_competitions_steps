@@ -106,3 +106,4 @@ Step-5
     
 Step-6
   Validation
+    Divide data we have full info about, in 2 parts(train and validation)
