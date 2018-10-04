@@ -107,3 +107,13 @@ Step-5
 Step-6
   Validation
     Divide data we have full info about, in 2 parts(train and validation)
+    1> Holdout        - Train test split
+    2> K-fold         - Train test split k-times with different test
+    3> Leave-one-out  - special case of k-fold with k = number of samples(specially used when we have few sample data)
+    4> Time based split - Split data using time based train-test split- mainly useful when we have to predict future outputs
+    
+  Types of Split
+    1> Random/rowwise - Randomly choose data(data can be independent, if not, exploit dependency)
+    2> Timewise - Time based split (moving window split, validation data is changed by one week) 
+    3> By id - split data based on id
+    4> Combined - combibation of 2 and 3
