@@ -117,3 +117,10 @@ Step-6
     2> Timewise - Time based split (moving window split, validation data is changed by one week) 
     3> By id - split data based on id
     4> Combined - combibation of 2 and 3
+
+
+Step-7
+  Find Data Leakages
+    1> Meta Data
+    2> info in IDs
+    3> Row Order
