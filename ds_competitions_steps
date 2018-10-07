@@ -124,3 +124,24 @@ Step-7
     1> Meta Data
     2> info in IDs
     3> Row Order
+    
+    
+
+
+
+
+
+
+Scoring metrics
+  Regression
+    1> MSE,RMSE - (root)mean squared error
+    2> MAE      - mean absolute error
+    3> MSPE     - mean squared percentage error
+    4> MAPE     - ---- absolute ---------
+    5> RMSLE    - Root mean squared log error
+  
+  Classification
+    1> Accuracy
+    2> Logarithmic loss
+    3> AUC - Area under Receiver Operating Curve
+    4> Cohen's Kappa`
