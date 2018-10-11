@@ -18,6 +18,13 @@ Step-1
                           frequency encoding)
       2> One-Hot Encoding - Convert 1 categorical feature to multiple columns with 0 and 1 at appropriate places
                             (pandas.get_dummies/sklearn.preprocessing.OneHotEncoder)
+      3> Mean Encoding - give values as mean of target value for each class
+                         ME regularization
+                            - CV loop inside train data - make folds and use all except 1 fold to data to mean encode left out fold
+                            - Smoothing
+                            - Adding random noice - Add random noice(not very good method)
+                            - Sorting and calculatin expanding mean - sord data and calculate nth category using mean of target of n-1
+    
                             
     Text
       1> Lowercase      - Convert everything to lowercase
@@ -126,22 +133,30 @@ Step-7
     3> Row Order
     
     
+Step-8
+  Metric Optimization
+    1> Run the right model                                  - MSW,logloss
+    2> Preprocess train and optimize another metric         - MSPE,MAPE,RMSLE
+    3> Optimize another metric and postprocess predictions  - Accuracy, kappa
+    4> Write custom loss function
+    5> Optimize another metric, use early stop
 
+    Scoring metrics
+      Regression
+        1> MSE,RMSE - (root)mean squared error
+        2> MAE      - mean absolute error
+        3> MSPE     - mean squared percentage error
+        4> MAPE     - ---- absolute ---------
+        5> RMSLE    - Root mean squared log error(Transform target:z=log(y+1), fit model with MSE loss and trasform 
+                                                  predictions back:y=exp(z) - 1)
 
+      Classification
+        1> Accuracy
+        2> Logarithmic loss
+        3> AUC - Area under Receiver Operating Curve
+        4> Cohen's Kappa`
+        
 
-
-
-
-Scoring metrics
-  Regression
-    1> MSE,RMSE - (root)mean squared error
-    2> MAE      - mean absolute error
-    3> MSPE     - mean squared percentage error
-    4> MAPE     - ---- absolute ---------
-    5> RMSLE    - Root mean squared log error
-  
-  Classification
-    1> Accuracy
-    2> Logarithmic loss
-    3> AUC - Area under Receiver Operating Curve
-    4> Cohen's Kappa`
+Step-9
+  Hyperparameter Tuning
+    
