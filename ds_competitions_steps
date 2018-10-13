@@ -1,3 +1,11 @@
+Competition Pipeline
+  > Understand the problem
+  > Exploratory Analysis
+    - Define CV strategy
+    - Feature Engineering
+    - Modelling
+  > Ensembling
+
 KNN : K nearest neighbours
 NN  : Neural Network
 LM  : Linear Model
