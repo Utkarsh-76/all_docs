@@ -342,7 +342,7 @@ df.loc[(slice(None){used in tuple index instead of :}, slice('index2_indentifier
 
 ##groupby
 df.groupby(col_to_groupby).count() {give count for distinct values of col which we grouped by}
-df.groupby(col_to_groupby)[col_to_operate_on].aggfunc()
+df.groupby(col_to_groupby)[col_to_operate_on].agg()
 df.groupby(col_to_groupby).agg(aggfunc/user defined aggregation func/dictionary)
 
 df.col.idxmax(){row-wise}/df.col.idxmax(axis='columns'){col-wise} --> give lable with max value
