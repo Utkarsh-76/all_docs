@@ -1,2 +1,2 @@
-# python_docs
-Python documentation for own use
+# all_docs
+Documentation for own use
