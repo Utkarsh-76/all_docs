@@ -1,0 +1,43 @@
+assign value   x <- 2
+
+vector    
+v <- c(1, 10, 49)   {c for combine function}
+sum elements of vector -- sum(v)
+element accesssing -- v[2]/v["name of the 2nd elment"] --> 10   (count start from 1 and not 0)
+subset -- v1 <- v[c(1,2)]/c[1:2] --> V1 is (1,10)
+mean(v) -- calculate mean of v
+tf <- v > 9 gives T/F vector
+v[tf] -- (10,49)
+
+
+Matrix
+matrix(1:9{vetor of elemts}, byrow = TRUE{if data to be filled row-wise}, nrow = 3{number of rows of matrix})
+rownames(my_matrix) <- row_names_vector     --  name rows
+colnames(my_matrix) <- col_names_vector     --  name columns
+rowSums()/colSums() -- Sum each row/column
+cbind() -- add column/s to matrices/vectors
+rbind() -- add row/s to matrices/vectors
+Matrix selection same as matlab
+
+
+Factors {Data type for categorical variables} {nominal(no order)/ordinal(ordered)}
+making factors -->    sex_vector <- c("Male", "Female", "Female", "Male", "Male")
+                      factor_sex_vector <-factor(sex_vector)
+                      
+             ordinal--factor_temperature_vector <- factor(temperature_vector, order = TRUE, levels = c("Low", "Medium", "High"))
+             
+Change factor levels -- levels(factor_survey_vector) <-c("Female", "Male")
+
+Summary() -- get summary/details of any variable
+
+
+DataFrame
+get head of DF -- head(df)
+str() -- get structure of DF
+create DF -- data.frame(v1,v2,v3)
+DF data accessing using []
+get a column from DF -- df$colName
+get sub DF using tf list -- df[tf_list, ]/subset(df,subset = tf_list)
+get sub DF column data using tf list -- df[tf_list, colName]
+order(df) -- get rank of each elemet
+df[order(df), ] -- sort elements
