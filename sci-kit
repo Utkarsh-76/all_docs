@@ -5,7 +5,7 @@ http://blog.kaggle.com/author/kevin-markham/
 
 sklearn.datasets --> example datasets
 
-sklearn.cross_validation - train_test_split  --> validate using tarining and testing split
+sklearn.model_selection - train_test_split  --> validate using tarining and testing split
                          - cross_val_score   --> validate model using cross validation
 
 sklearn.neighbours --> neighbours algorithms
