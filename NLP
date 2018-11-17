@@ -1,0 +1,8 @@
+from nltk.text import Text
+text1 = Text(nltk.corpus.gutenberg.words("file_path"))
+--> Convert file to nltk text object
+
+text1.concordance("word") --> find sentence in text1 where "word" in present
+text1.similarity("word") --> find words that have similar context as "word"
+text1.common_contexts(["word1","word2"]) --> find contexts that are shared by "word1" and "word2"
+text1.dispresion_plot(["word1","word2","word3"]) --> draw dispresion plot of "word1","word2" and "word3" in text1
