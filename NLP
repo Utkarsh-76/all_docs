@@ -6,3 +6,18 @@ text1.concordance("word") --> find sentence in text1 where "word" in present
 text1.similarity("word") --> find words that have similar context as "word"
 text1.common_contexts(["word1","word2"]) --> find contexts that are shared by "word1" and "word2"
 text1.dispresion_plot(["word1","word2","word3"]) --> draw dispresion plot of "word1","word2" and "word3" in text1
+text1.collocations() --> output all collocation of 2 words(bigrams common in text1)
+
+
+fdist = FreqDist({text/number list/string}) --> Find frequency distribution of the input
+  -fdist.keys() --> output Keys of the distribution in order of decreasing frequency
+  -fdist.items() --> tuple of key value of frequency distribution
+  -fdist.inc(sample) --> Increment the count for this sample
+  -fdist['monstrous'] --> Count of the number of times a given sample occurred
+  -fdist.freq('monstrous') --> Frequency of a given sample
+  -fdist.N() --> Total number of samples
+  -for sample in fdist: --> Iterate over the samples, in order of decreasing frequency
+  -fdist.max() --> Sample with the greatest count
+  -fdist.tabulate() --> Tabulate the frequency distribution
+  -fdist.plot() --> Graphical plot of the frequency distribution
+  -fdist.plot(cumulative=True) --> Cumulative plot of the frequency distribution
