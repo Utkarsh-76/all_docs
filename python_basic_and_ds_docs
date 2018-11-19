@@ -348,3 +348,13 @@ df.groupby(col_to_groupby).agg(aggfunc/user defined aggregation func/dictionary)
 df.col.idxmax(){row-wise}/df.col.idxmax(axis='columns'){col-wise} --> give lable with max value
 df.col.idxmin()
 .nunique() --> gives number of unique values in a col
+
+s.startswith(t) --> Test if s starts with t
+s.endswith(t) --> Test if s ends with t
+t in s --> Test if t is contained inside s
+s.islower() --> Test if all cased characters in s are lowercase
+s.isupper() --> Test if all cased characters in s are uppercase
+s.isalpha() --> Test if all characters in s are alphabetic
+s.isalnum() --> Test if all characters in s are alphanumeric
+s.isdigit() --> Test if all characters in s are digits
+s.istitle() --> Test if s is titlecased (all words in s have initial capitals)
