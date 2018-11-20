@@ -34,7 +34,6 @@ s.rfind(t) --> Index of last instance of string t inside s (-1 if not found)
 s.index(t) --> Like s.find(t), except it raises ValueError if not found
 s.rindex(t) --> Like s.rfind(t), except it raises ValueError if not found
 s.join(text) --> Combine the words of the text into a string using s as the glue
-s.split(t) --> Split s into a list wherever a t is found (whitespace by default)
 s.splitlines() --> Split s into a list of strings, one per line
 s.lower() --> A lowercased version of the string s
 s.upper() --> An uppercased version of the string s
