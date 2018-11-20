@@ -21,3 +21,17 @@ fdist = FreqDist({text/number list/string}) --> Find frequency distribution of t
   -fdist.tabulate() --> Tabulate the frequency distribution
   -fdist.plot() --> Graphical plot of the frequency distribution
   -fdist.plot(cumulative=True) --> Cumulative plot of the frequency distribution
+
+
+POS-Tags
+CC - coordinating conjunction
+RB - adverbs
+IN - preposition
+NN - common noun
+NNP - proper noun
+NNPS - proper noun plural
+NNS - common noun plural
+JJ - adjective
+
+nltk.help.upenn_tagset('NN.*') -- use regex to get help for tags
+nltk.help.upenn_tagset('RB') -- get help for tag 'RB'
