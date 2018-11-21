@@ -1,3 +1,5 @@
+tf-idf -> term frequency-inverse term frequency
+
 from nltk.text import Text
 text1 = Text(nltk.corpus.gutenberg.words("file_path"))
 --> Convert file to nltk text object
@@ -41,14 +43,26 @@ nltk.help.upenn_tagset('RB') -- get help for tag 'RB'
 nltk.tokenize.word_tokenize(text) --> tokenize each word in the text
 nltk.tokenize.sent_tokenize(text) --> tokenize each sentence in the text
 nltk.tokenize.regexp_tokenize(text, regexp) --> tokenize text using regexp
-
+nltk.pos_tag(tokenized_text) --> give part of speech tag to each token
+nltk.ne_chunk(tokenized_pos'ed_text) --> give NER tagged trees to text
 
 collections.Counter(tokenized_text) --> ouputs adictionary with count of each word in the text
 nltk.corpus.stopwords --> list of stop words for all languages
 
-
 nltk.stem.WordNetLemmatizer --> used for lemmatization
+
+
 
 gensim --
 gensim.corpora.dictionary.Dictionary(tokenized_text) --> give id to each token
 dictionary.doc2bow(doc) --> covert to bag of words model uning token id
+gensim.models.tfidfmodel.TfidfModel(gensim_bow) --> generate tf-idf model
+
+
+Spacy --
+nlp = spacy.load('en')
+doc = nlp(text_doc)
+doc.ents --> ouputs entities
+doc.ents[0].label_ --> ouputs label of the entity
+
+Ployglot -- spacy for 130 diff languages
