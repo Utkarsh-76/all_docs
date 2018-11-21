@@ -316,6 +316,8 @@ $           -- match the pattern at the end
 A-Za-z      -- match capital/small letter
 [A-Za-z\.\s]* -- any capital letter, any . and any ' ' is acceptable
 
+re.match(pattern,str) --> match patter only at the start of the string
+re.search(pattern,str) --> search for pattern in full string
 p = re.compile('RE pattern')  --> compile the RegEx
 m = p.match --> match 'REp' default starting at index 0
 m = p.search --> match 'REp' default starting at any index
