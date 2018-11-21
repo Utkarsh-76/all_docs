@@ -35,3 +35,8 @@ JJ - adjective
 
 nltk.help.upenn_tagset('NN.*') -- use regex to get help for tags
 nltk.help.upenn_tagset('RB') -- get help for tag 'RB'
+
+
+nltk.tokenize.word_tokenize(text) --> tokenize each word in the text
+nltk.tokenize.sent_tokenize(text) --> tokenize each sentence in the text
+nltk.tokenize.regexp_tokenize(text, regexp) --> tokenize text using regexp
