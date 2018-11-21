@@ -33,6 +33,7 @@ NNPS - proper noun plural
 NNS - common noun plural
 JJ - adjective
 
+nltk --
 nltk.help.upenn_tagset('NN.*') -- use regex to get help for tags
 nltk.help.upenn_tagset('RB') -- get help for tag 'RB'
 
@@ -40,3 +41,14 @@ nltk.help.upenn_tagset('RB') -- get help for tag 'RB'
 nltk.tokenize.word_tokenize(text) --> tokenize each word in the text
 nltk.tokenize.sent_tokenize(text) --> tokenize each sentence in the text
 nltk.tokenize.regexp_tokenize(text, regexp) --> tokenize text using regexp
+
+
+collections.Counter(tokenized_text) --> ouputs adictionary with count of each word in the text
+nltk.corpus.stopwords --> list of stop words for all languages
+
+
+nltk.stem.WordNetLemmatizer --> used for lemmatization
+
+gensim --
+gensim.corpora.dictionary.Dictionary(tokenized_text) --> give id to each token
+dictionary.doc2bow(doc) --> covert to bag of words model uning token id
