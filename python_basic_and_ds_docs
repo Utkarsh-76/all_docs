@@ -9,6 +9,7 @@ https://becominghuman.ai/cheat-sheets-for-ai-neural-networks-machine-learning-de
 
 ##Debugging
 import pdb; pdb.set_trace()
+https://appletree.or.kr/quick_reference_cards/Python/Python%20Debugger%20Cheatsheet.pdf
 
 importing a function from a package
 from functools import reduce
