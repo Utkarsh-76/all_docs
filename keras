@@ -16,3 +16,9 @@ neural_net.fit(X_train{input of training set}, Y_train{ouput of training set}, e
 neural_net.evaluate(X_test,y_test, verbose = 0) --> gives out loss, accuracy
 
 neural_net_fitted.history --> dict that contains loss and accuracy for each epochs our model went through
+
+keras.callbacks.EarlyStopping(monitor='val_loss'{thing to be monitored}, min_delta=0{min change in monitored quantity}, 
+            patience=0{no of epochs to wait if there is no imporvement}, verbose=0, 
+            mode='auto'{min/max/auto, monitor stop decreasing/monitor stop increasing/automatically inferred from monitor name}, 
+            baseline=None{training will stop if there is no improvement over baseline}, 
+            restore_best_weights=False{True/False, use model weight with best monitor value/use weights of last step}) --> callback for early stopping using validation set
