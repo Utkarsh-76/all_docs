@@ -1,0 +1,13 @@
+https://www.youtube.com/watch?v=aircAruvnKk&list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi&index=2&t=601s
+This explains how neural network work in layman terms.
+
+Early neural networks used sigmoid(to bring all the values b/w 0 and 1) as activation funtion.
+Weighted sum of each neuron value gives value to the next set of neurons
+For the example of identifying digits from handwritten digits:
+  -We had data points with 28*28 pixel pictures. Each pixel correspond to a neuron(784 neuron)
+  -Two hidden layers with 16 neurons each
+  -Guess > - input layer combine to activate all relevent neurons of first hidden layers(identify the edge in 
+             sub-element{2nd hidden layer} lines that combine to form a loop)
+           - 2nd hidden layer correspond to sub elements(like maybe an upper loop, lower loop, Hz line, Vertical line etc.)
+           
+  -Bias > a number that we add/subtract from the weighted sum of neuron values(eg: (a1*w1) + (a2*w2) + .. + (n*wn) - 10{bias})
