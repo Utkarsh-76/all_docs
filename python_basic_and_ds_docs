@@ -50,6 +50,7 @@ calling element from numpy array --> np_arr[0,2] gives "c"
 np.logical_and(),np.logical_or(),np.logical_not() are used as logical operators on numpy arrays
 looping over 2D np.array
 for val in np.nditer(np_2d_arr)
+np.reshape(a, dim) --> reshape any dimension array, a, to dimensions dim. reshaping is done row-wise
 
 plotting
 making a plot --> plt.plot(x = x_axis,y = y_axis) {two dimensional}     plt.plot(y_axis) {one dimensional--set integer on x-axis}
