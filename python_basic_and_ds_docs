@@ -55,6 +55,7 @@ for val in np.nditer(np_2d_arr)
 np.reshape(a, dim) --> reshape any dimension array, a, to dimensions dim. reshaping is done row-wise
 
 plotting
+matplotlib guide --> https://realpython.com/python-matplotlib-guide/
 making a plot --> plt.plot(x = x_axis,y = y_axis) {two dimensional}     plt.plot(y_axis) {one dimensional--set integer on x-axis}
 showing plot on screen --> plt.show()
 line graph --> df.plot(subplots=True{plot all columns of df seperately})
