@@ -13,6 +13,7 @@ For the example of identifying digits from handwritten digits:
   -Bias > a number that we add/subtract from the weighted sum of neuron values(eg: (a1*w1) + (a2*w2) + .. + (n*wn) - 10{bias})
 
 
-
 Improving Neural Network
-- 
+  - Reduce mismatch in train/test sets
+  - if High Bias : Bigger network, Train longer(, NN architecture Search)
+  - if High Variance : More Data, Regularization(L2 regularization/dropout regularization)(, NN architecture Search)
