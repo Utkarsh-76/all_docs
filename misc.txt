@@ -1,0 +1,7 @@
+Bias v/s Variance
+
+Bias Errors - Errors due to assumption about the model(assumptions like linearity in a linear regression)
+    High bias is underfitting
+
+Variance Error - Change in model if training dataset is changed(Measure of Variablity in result)
+    High variance in overfitting
