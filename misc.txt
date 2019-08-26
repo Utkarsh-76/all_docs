@@ -5,3 +5,8 @@ Bias Errors - Errors due to assumption about the model(assumptions like linearit
 
 Variance Error - Change in model if training dataset is changed(Measure of Variablity in result)
     High variance in overfitting
+
+
+Exponentially weighted moving average: 
+    - v(t) = [(1-beta)*(x(t)) + (beta)*(v(t-1))]     {v = moving average}
+    - Bias correction -> v(t) = v(t)/(1-(beta^t)){bias correction is needed when we need correct averages for initial phase}
