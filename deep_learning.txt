@@ -22,4 +22,4 @@ Improving Neural Network accuracy
   
 Optimize Neural network(learn faster)
   - Use batch gradient descent(batch size of 2^(6 to 9))
-  
+  - Gradient descent with momentum(implement exponentially decreasing moving average on db and dw)
