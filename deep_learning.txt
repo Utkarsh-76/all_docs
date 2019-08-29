@@ -26,3 +26,10 @@ Optimize Neural network(learn faster)
   - RMSprop(w = w - (alpha)*dw/(sqrt(Sdw+epsilon)), Sdw = (beta)*(Sdw) + (1-beta)*(dw^2))
   - Adam(adaptive moment estimation) - momentum + RMDprop
   - Learning Rate decay - Reducing learning rate with increase in epoch number
+
+Hyper-parameter tuning
+  - most imp to least imp:
+        (alpha) (beta,hidden units, mini-batch size) (number of layers, learning rate decay)
+  - Random samples of each hyper paramenter rather than using grids
+  - coarse to fine(fine tune hyper parameters around the best ones found)
+  - Use log scale for randomly choosing when needed
