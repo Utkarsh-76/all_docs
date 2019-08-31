@@ -1,0 +1,35 @@
+There are two parths of a tensor flow program
+  1. Create computation graph
+  2. Run the graph
+  
+Three types of declarations:
+  - tf.placeholder(tf.float32)  --> to define a placeholder that will be used to hold a value(in feed_dict) when 
+                                    we run the session(like feature and label values in a neural network)
+  - tf.constant(5)              --> constant value 5
+  - tf.Variable()               --> like weights and bias in a neural network
+  
+  
+after declaring the placeholders, define your model.
+
+optimizer = tf.train.AdamOptimizer{or other optimizer}(learning_rate = ...).minimize(...)
+init = tf.global_variables_initializer()
+for tf.Session as sess:
+  tf.run(init)
+  for epoc in range(epocs_num):
+    _, cost = sess.run([...{optimizer}, ...{cost}], feed_dict = {X:..., Y:...})
+    
+parameters = sess.run(parameters) --> save best model weights and biases in parameters
+  
+  
+tf.sigmoid(x) --> sigmod funtion on x
+tf.nn.relu(x) --> relu funtion on x
+
+tf.nn.sigmoid_cross_entropy_with_logits(logits = ...,  labels = ...) --> cost funtion calculation using sigmoid activation 
+                                                                          in last layer
+tf.nn.softmax_cross_entropy_with_logits(logits = ..., labels = ...) --> cost funtion calculation using softmax activation 
+                                                                          in last layer
+tf.reduce_mean(X) --> summation over examples
+tf.matmul(A,B)  --> matrix multiplication of A and B
+tf.one_hot(labels,depth,axis) --> convert labels to one hot encoding
+tf.get_variable(... , ... , initializer = tf.contrib.layers.xavier_initializer/tf.zero_initializer)
+tf.equal() --> compare two tensors
