@@ -16,7 +16,8 @@ For the example of identifying digits from handwritten digits:
 Improving Neural Network accuracy
   - Reduce mismatch in train/test sets
   - if High Bias(underfitting) : Bigger network, Train longer(, NN architecture Search)
-  - if High Variance(overfitting) : More Data(flipping images, randomly cropping/ different sizes/ distortion in images of number)(, NN                                                 architecture Search),Regularization(L2 regularization/dropout regularization/early stopping)
+  - if High Variance(overfitting) : More Data(flipping images, randomly cropping/ different sizes/ distortion in images of number)(, NN
+      architecture Search),Regularization(L2 regularization/dropout regularization/early stopping)
   - Normalizing Inputs : Normalize train and test set with same mean and std
   - Weights initialization : initialize with sqrt(2/(nodes in previous layer))
   
