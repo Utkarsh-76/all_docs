@@ -55,6 +55,10 @@ clf.fit(X,y)
 y_pred = (X_test)
 decison tree --> http://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html
 
+from sklearn.ensemble import RandomForestClassifier
+ran_forest = RandomForestClassifier(n_estimators = 100)
+ran_forest.fit(X,y)
+
 from sklearn.ensemble import GradientBoostingClassifier
 clf = GradientBoostingClassifier()
 
