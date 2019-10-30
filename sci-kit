@@ -13,7 +13,7 @@ sklearn.neighbours --> neighbours algorithms
                     
 sklearn.linear_model --> LinearRegression
                     
-sklearn.grid_searvh --> 
+sklearn.model_selection --> 
                       - GridSearchCV
                       - RandomizedSearchCV
                     
