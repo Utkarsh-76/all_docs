@@ -1,8 +1,10 @@
+from keras import Sequential
 neural_net = Sequential() --> initialtes the sequential class
 
+from keras import Dense
 neural_net.add() --> adds a layer to the network
 neural_net.add(Dense(5{no of nodes}, input_dim=8{input nodes(only specified in 1st hidden layer)}, 
-            activation='relu'{activation function}))
+            activation='relu'{activation function})) --> adding a dense layer to out neural network
 
 neural_net.compile(loss='binary_crossentropy'{loss function to be cosidered}, 
              optimizer='adam'{optimizer(like gradient descent) used}, 
