@@ -24,3 +24,5 @@ keras.callbacks.EarlyStopping(monitor='val_loss'{thing to be monitored}, min_del
             mode='auto'{min/max/auto, monitor stop decreasing/monitor stop increasing/automatically inferred from monitor name}, 
             baseline=None{training will stop if there is no improvement over baseline}, 
             restore_best_weights=False{True/False, use model weight with best monitor value/use weights of last step}) --> callback for early stopping using validation set
+
+
