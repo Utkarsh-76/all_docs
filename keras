@@ -1,10 +1,24 @@
+Importing Data/loading data to memory/image augmentation
+https://keras.io/preprocessing/image/
+
+from keras.preprocessing.image import ImageDataGenerator
+datagen = ImageDataGenerator(rescale = 1./255{rescale each value of pixel}, horizontal_flip = True)
+images_flow = datagen.flow_from_directory(directory, target_size = (200,200){shape of all resized images}, 
+                                    class_mode = 'binary'{binary/categorical}, batch_size = 8{number of images in 1 batch/epoch})
+
+
 from keras import Sequential
 neural_net = Sequential() --> initialtes the sequential class
 
-from keras import Dense
+from keras.layers import Dense, Conv2D, Flatten
 neural_net.add() --> adds a layer to the network
 neural_net.add(Dense(5{no of nodes}, input_dim=8{input nodes(only specified in 1st hidden layer)}, 
             activation='relu'{activation function})) --> adding a dense layer to out neural network
+            
+neural_net.add(Conv2D(64{no of filters}, kernal_size=3{size of convolution window(3*3 filter)}, strides = 1,
+            activation='relu'{activation function})) --> adding a convolution layer
+            
+neural_net.add(Flatten()) --> flatten a conv net {now treat it as normat neural network}
 
 neural_net.compile(loss='binary_crossentropy'{loss function to be cosidered}, 
              optimizer='adam'{optimizer(like gradient descent) used}, 
@@ -14,6 +28,11 @@ neural_net.fit(X_train{input of training set}, Y_train{ouput of training set}, e
             verbose=0{print log while running th NN}, batch_size={size of each batch}, 
             callbacks={optional-set of funtion to be applied at a stage}, 
             initial_epoch=0{eposch at which to start the training-useful to resume previous training})
+            
+neural_net.fit_generator(images_flow, epochs = 5, steps_per_epoch = number of images/batch size, validation_data = 
+                        validation_images{validation images flow}, validation_steps = 8{number of images per validation epoch})
+            {use this when data is imported using ImageDataGenerator}
+
             
 neural_net.evaluate(X_test,y_test, verbose = 0) --> gives out loss, accuracy
 
