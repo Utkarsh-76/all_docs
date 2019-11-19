@@ -15,7 +15,7 @@ EDA : Exploratory Data Analysis
 Step-1
   Preprocessing
     Numeric Features
-      1> Feature scaling- mainly for KNN, NN, linear models(sklearn.preprocessing.MinMaxScalar/StandardScalar)
+      1> Feature scaling- mainly for KNN, NN, linear models(sklearn.preprocessing.MinMaxScaler/StandardScalar)
       2> Outliers - Remove outliers manually or clip data vetween two percentiles(eg 1 and 99){callef winsorization}
       3> (Optional) Rank Transformation - data to ranke(useful to bring outliers closer)(LM, KNN, NN)(scipy.stats.rankdata)
       4> (Optional) Log transormation/Raise to the power(sqrt,square, etc.)(NT sp. NN)
