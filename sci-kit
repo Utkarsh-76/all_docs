@@ -62,6 +62,9 @@ ran_forest.fit(X,y)
 from sklearn.ensemble import GradientBoostingClassifier
 clf = GradientBoostingClassifier()
 
+from xgboost import XGBClassifier
+model = XGBClassifier()
+
 GBM parameter tuning--> https://www.analyticsvidhya.com/blog/2016/02/complete-guide-parameter-tuning-gradient-boosting-gbm-python/
 
 from sklearn.preprocessing import LabelEncoder
