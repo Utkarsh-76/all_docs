@@ -26,6 +26,8 @@ concat/adding list --> l + [f,g] => [a,b,d,e,c,f,g]
 delete element from list --> del(l[2]) => [a,b,e,c]
 get index of element --> l.index("c") => 4
 adding element in the end --> l.append('k')
+filtering by date --> tmp[tmp['DATE']>=datetime.date(2022,1,1)]
+
 
 length of string/list --> len(str)
 calling substring --> str[2:7]
