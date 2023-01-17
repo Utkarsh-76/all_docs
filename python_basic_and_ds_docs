@@ -295,7 +295,7 @@ import glob
 csv_files = glob.glob(*.csv){get all the csv files}
 
 ##Data Cleaning
-df['a']=df['a'].astype(str/'category'){convert numeric col to string/categorical data}
+df['a']=df['a'].astype(str/'category', error="raise/ignore"){convert numeric col to string/categorical data}
 df['a']=pd.to_numeric(df['a'],errors='coerce'){convert to numeric column with non-numeric data coverted to NaN}
 
 ##Regular Expressions
@@ -380,3 +380,6 @@ s.isalpha() --> Test if all characters in s are alphabetic
 s.isalnum() --> Test if all characters in s are alphanumeric
 s.isdigit() --> Test if all characters in s are digits
 s.istitle() --> Test if s is titlecased (all words in s have initial capitals)
+
+
+compare dataframes --> df1.compare(df2)
