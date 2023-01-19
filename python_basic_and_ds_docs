@@ -383,3 +383,5 @@ s.istitle() --> Test if s is titlecased (all words in s have initial capitals)
 
 
 compare dataframes --> df1.compare(df2)
+Filter column names with substring --> [col for col in df.columns.tolist() if "abc" in col]
+column rename --> df.rename({"REFERENCE_DATE_x": 'REFERENCE_DATE'}, axis = 1)
