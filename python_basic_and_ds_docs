@@ -113,6 +113,8 @@ read excel file --> data = pd.ExcelFile(file)
                     data.parse(sheetname/sheet_index, skip_rows=[0,1], names=['Country','State'], 
                     parse_cols=[0]) --> parse the specified sheet in dataframe
                     
+                --> proj_coll = pd.read_excel(file_name, sheet_name={sheet_no/sheet_name})
+                    
 df.columns  --> return column names
 df.shape    --> number of rows and cols of DataFrame
 df.info()   --> get info of the dataframe
