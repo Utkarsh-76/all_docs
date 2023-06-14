@@ -3,6 +3,9 @@
 Cheat sheets for ML algos
 https://becominghuman.ai/cheat-sheets-for-ai-neural-networks-machine-learning-deep-learning-big-data-678c51b4b463
 
+Documentations/resources
+seaborn: https://seaborn.pydata.org/api.html
+
 help in python example --> np.reshape? (use ? after a funtion to get help)
 
 ##Intalling a package
