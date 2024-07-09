@@ -1,7 +1,7 @@
 # Python and Data science related documentation
 This is a repository that contains commonly used syntax references for python and data science
 
-NLP                      - Basic NLP tools for reference
+NLP( &nbsp; )( &nbsp; )( &nbsp; )                      - Basic NLP tools for reference
 
 bias_variance.PNG        - A good visual to differentiate between bias and variance
 
