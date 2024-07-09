@@ -1,7 +1,7 @@
 # Python and Data science related documentation
 This is a repository that contains commonly used syntax references for python and data science
 
-NLP&emsp;&emsp;&emsp;                      - Basic NLP tools for reference
+NLP &emsp;&emsp;&emsp;                      - Basic NLP tools for reference
 
 bias_variance.PNG        - A good visual to differentiate between bias and variance
 
@@ -17,7 +17,7 @@ misc.txt                 - Additional knowledge
 
 ml_problem_steps         - Steps to follow for a Machine learning problem (in brief)
 
-model list.png           - List of common ML problems and the models to use for them
+model list.png &emsp;&emsp;  - List of common ML problems and the models to use for them
 
 python_basic_and_ds_docs - Commonly used but forgetful syntax for Python basics and data science
 
